@@ -5,8 +5,55 @@ header{
     padding: 10px 20px;
     background-color: aqua;
 }
-#bread-crumb-container{
-    background-color: blueviolet;
+
+main{
     display: flex;
-    align-items: center;
+}
+#from-container{
+    background-color: brown;
+    display: grid;
+    padding: 10px 20px;
+    flex-basis: 40% ;
+}
+#table-container{
+    display: grid;
+    padding: 10px 20px;
+    flex-basis: 60%;
+
+}
+#table-container table th:first-child,
+#table-container table td:first-child,
+#table-container table th:last-child,
+#table-container table td:last-child{
+    text-align: center;
+}
+#table-container i[title="Edit"]:hover{
+    color: orange;
+    cursor: pointer;
+}
+#table-container i[title="Delete"]:hover{
+    color: red;
+    cursor: pointer;
+}
+@media all and (max-width: 991px){
+    main{
+        flex-direction: column;
+    }
+}
+@media all and (min-width: 992px) and (max-width: 1199px){
+    #form-container{
+        flex-basis: 45%;
+    }
+    #table-container{
+        flex-basis: 55%;
+    }
+}
+@media all and (max-width: 480px){
+    header{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #btn-new-customer span{
+        display: none;
+    }
 }

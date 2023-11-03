@@ -35,8 +35,14 @@
               </nav>
         </div>
     </header>
-    <main>
-        <form id="from-container" action="#" method="POST">
+    <main class="m-2">
+        <form id="form-container" action="#" method="POST">
+            <div class="d-flex align-items-center justify-content-between">
+                <h2>Customer Details</h2>
+                <button id="btn-new-customer" type="button" class="btn btn-primary">
+                    + NEW <span>CUSTOMER</span></button>
+
+            </div>
             <div class="mb-3">
                 <label for="txt-id" class="form-label">Customer ID</label>
                 <input type="text" class="form-control" name="id" id="txt-id" placeholder="Eg: C001">
@@ -55,7 +61,66 @@
             </div>
         </form>
         <div id="table-container">
-
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="txt-search" placeholder="Enter your query to search customers">
+                <label for="txt-search" >Enter your query to search customers</label>            
+            </div>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>ADDRESS</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C001</td>
+                        <td>Kasun Sampath</td>
+                        <td>Galle</td>
+                        <td>
+                            <i title="Edit" class="bi bi-pencil-square me-2"></i>
+                            <i title="Delete" class="bi bi-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>C002</td>
+                        <td>Nuwan Ramindu</td>
+                        <td>Matara</td>
+                        <td>
+                            <i title="Edit" class="bi bi-pencil-square me-2"></i>
+                            <i title="Delete" class="bi bi-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>C003</td>
+                        <td>Ravindu Madusanka</td>
+                        <td>Kegalle</td>
+                        <td>
+                            <i title="Edit" class="bi bi-pencil-square me-2"></i>
+                            <i title="Delete" class="bi bi-trash"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="pagination-container" class="d-flex justify-content-center">
+                <nav>
+                    <ul class="pagination">
+                      <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
         </div>
     </main>
 </body>
